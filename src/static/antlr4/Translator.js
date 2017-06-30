@@ -23,7 +23,6 @@ export class Translator extends U16To32Listener {
   }
 
   enterRepPair (ctx) {
-    console.log(ctx.getText())
     write(convert(
       ctx.RepHigh().getText(), // eslint-disable-line new-cap
       ctx.RepLow().getText() // eslint-disable-line new-cap
