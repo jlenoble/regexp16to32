@@ -23,11 +23,21 @@ reps
 ;
 
 classHigh
-: OpenBracket (RangeHigh|RepHigh)+ CloseBracket
+: OpenBracket patternHigh+ CloseBracket
 ;
 
 classLow
-: OpenBracket (RangeLow|RepLow)+ CloseBracket
+: OpenBracket patternLow+ CloseBracket
+;
+
+patternHigh
+: RangeHigh
+| RepHigh
+;
+
+patternLow
+: RangeLow
+| RepLow
 ;
 
 RangeHigh

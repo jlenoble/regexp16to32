@@ -65,5 +65,23 @@ U16To32Listener.prototype.exitClassLow = function(ctx) {
 };
 
 
+// Enter a parse tree produced by U16To32Parser#patternHigh.
+U16To32Listener.prototype.enterPatternHigh = function(ctx) {
+};
+
+// Exit a parse tree produced by U16To32Parser#patternHigh.
+U16To32Listener.prototype.exitPatternHigh = function(ctx) {
+};
+
+
+// Enter a parse tree produced by U16To32Parser#patternLow.
+U16To32Listener.prototype.enterPatternLow = function(ctx) {
+};
+
+// Exit a parse tree produced by U16To32Parser#patternLow.
+U16To32Listener.prototype.exitPatternLow = function(ctx) {
+};
+
+
 
 exports.U16To32Listener = U16To32Listener;

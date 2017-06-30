@@ -5,36 +5,39 @@ var U16To32Listener = require('./U16To32Listener').U16To32Listener;
 var grammarFileName = "U16To32.g4";
 
 var serializedATN = ["\u0003\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964",
-    "\u0003\t1\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t\u0004",
-    "\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007\u0003\u0002",
-    "\u0006\u0002\u0010\n\u0002\r\u0002\u000e\u0002\u0011\u0003\u0002\u0003",
-    "\u0002\u0003\u0003\u0003\u0003\u0003\u0003\u0005\u0003\u0019\n\u0003",
-    "\u0003\u0004\u0003\u0004\u0003\u0004\u0003\u0005\u0003\u0005\u0003\u0005",
-    "\u0003\u0006\u0003\u0006\u0006\u0006#\n\u0006\r\u0006\u000e\u0006$\u0003",
-    "\u0006\u0003\u0006\u0003\u0007\u0003\u0007\u0006\u0007+\n\u0007\r\u0007",
-    "\u000e\u0007,\u0003\u0007\u0003\u0007\u0003\u0007\u0002\u0002\b\u0002",
-    "\u0004\u0006\b\n\f\u0002\u0004\u0004\u0002\u0004\u0004\u0006\u0006\u0004",
-    "\u0002\u0005\u0005\u0007\u0007\u0002/\u0002\u000f\u0003\u0002\u0002",
-    "\u0002\u0004\u0018\u0003\u0002\u0002\u0002\u0006\u001a\u0003\u0002\u0002",
-    "\u0002\b\u001d\u0003\u0002\u0002\u0002\n \u0003\u0002\u0002\u0002\f",
-    "(\u0003\u0002\u0002\u0002\u000e\u0010\u0005\u0004\u0003\u0002\u000f",
-    "\u000e\u0003\u0002\u0002\u0002\u0010\u0011\u0003\u0002\u0002\u0002\u0011",
-    "\u000f\u0003\u0002\u0002\u0002\u0011\u0012\u0003\u0002\u0002\u0002\u0012",
-    "\u0013\u0003\u0002\u0002\u0002\u0013\u0014\u0007\u0002\u0002\u0003\u0014",
-    "\u0003\u0003\u0002\u0002\u0002\u0015\u0019\u0005\b\u0005\u0002\u0016",
-    "\u0019\u0005\u0006\u0004\u0002\u0017\u0019\u0007\u0003\u0002\u0002\u0018",
-    "\u0015\u0003\u0002\u0002\u0002\u0018\u0016\u0003\u0002\u0002\u0002\u0018",
-    "\u0017\u0003\u0002\u0002\u0002\u0019\u0005\u0003\u0002\u0002\u0002\u001a",
-    "\u001b\u0007\u0006\u0002\u0002\u001b\u001c\u0007\u0007\u0002\u0002\u001c",
-    "\u0007\u0003\u0002\u0002\u0002\u001d\u001e\u0005\n\u0006\u0002\u001e",
-    "\u001f\u0005\f\u0007\u0002\u001f\t\u0003\u0002\u0002\u0002 \"\u0007",
-    "\b\u0002\u0002!#\t\u0002\u0002\u0002\"!\u0003\u0002\u0002\u0002#$\u0003",
-    "\u0002\u0002\u0002$\"\u0003\u0002\u0002\u0002$%\u0003\u0002\u0002\u0002",
-    "%&\u0003\u0002\u0002\u0002&\'\u0007\t\u0002\u0002\'\u000b\u0003\u0002",
-    "\u0002\u0002(*\u0007\b\u0002\u0002)+\t\u0003\u0002\u0002*)\u0003\u0002",
-    "\u0002\u0002+,\u0003\u0002\u0002\u0002,*\u0003\u0002\u0002\u0002,-\u0003",
-    "\u0002\u0002\u0002-.\u0003\u0002\u0002\u0002./\u0007\t\u0002\u0002/",
-    "\r\u0003\u0002\u0002\u0002\u0006\u0011\u0018$,"].join("");
+    "\u0003\t9\u0004\u0002\t\u0002\u0004\u0003\t\u0003\u0004\u0004\t\u0004",
+    "\u0004\u0005\t\u0005\u0004\u0006\t\u0006\u0004\u0007\t\u0007\u0004\b",
+    "\t\b\u0004\t\t\t\u0003\u0002\u0006\u0002\u0014\n\u0002\r\u0002\u000e",
+    "\u0002\u0015\u0003\u0002\u0003\u0002\u0003\u0003\u0003\u0003\u0003\u0003",
+    "\u0005\u0003\u001d\n\u0003\u0003\u0004\u0003\u0004\u0003\u0004\u0003",
+    "\u0005\u0003\u0005\u0003\u0005\u0003\u0006\u0003\u0006\u0006\u0006\'",
+    "\n\u0006\r\u0006\u000e\u0006(\u0003\u0006\u0003\u0006\u0003\u0007\u0003",
+    "\u0007\u0006\u0007/\n\u0007\r\u0007\u000e\u00070\u0003\u0007\u0003\u0007",
+    "\u0003\b\u0003\b\u0003\t\u0003\t\u0003\t\u0002\u0002\n\u0002\u0004\u0006",
+    "\b\n\f\u000e\u0010\u0002\u0004\u0004\u0002\u0004\u0004\u0006\u0006\u0004",
+    "\u0002\u0005\u0005\u0007\u0007\u00025\u0002\u0013\u0003\u0002\u0002",
+    "\u0002\u0004\u001c\u0003\u0002\u0002\u0002\u0006\u001e\u0003\u0002\u0002",
+    "\u0002\b!\u0003\u0002\u0002\u0002\n$\u0003\u0002\u0002\u0002\f,\u0003",
+    "\u0002\u0002\u0002\u000e4\u0003\u0002\u0002\u0002\u00106\u0003\u0002",
+    "\u0002\u0002\u0012\u0014\u0005\u0004\u0003\u0002\u0013\u0012\u0003\u0002",
+    "\u0002\u0002\u0014\u0015\u0003\u0002\u0002\u0002\u0015\u0013\u0003\u0002",
+    "\u0002\u0002\u0015\u0016\u0003\u0002\u0002\u0002\u0016\u0017\u0003\u0002",
+    "\u0002\u0002\u0017\u0018\u0007\u0002\u0002\u0003\u0018\u0003\u0003\u0002",
+    "\u0002\u0002\u0019\u001d\u0005\b\u0005\u0002\u001a\u001d\u0005\u0006",
+    "\u0004\u0002\u001b\u001d\u0007\u0003\u0002\u0002\u001c\u0019\u0003\u0002",
+    "\u0002\u0002\u001c\u001a\u0003\u0002\u0002\u0002\u001c\u001b\u0003\u0002",
+    "\u0002\u0002\u001d\u0005\u0003\u0002\u0002\u0002\u001e\u001f\u0007\u0006",
+    "\u0002\u0002\u001f \u0007\u0007\u0002\u0002 \u0007\u0003\u0002\u0002",
+    "\u0002!\"\u0005\n\u0006\u0002\"#\u0005\f\u0007\u0002#\t\u0003\u0002",
+    "\u0002\u0002$&\u0007\b\u0002\u0002%\'\u0005\u000e\b\u0002&%\u0003\u0002",
+    "\u0002\u0002\'(\u0003\u0002\u0002\u0002(&\u0003\u0002\u0002\u0002()",
+    "\u0003\u0002\u0002\u0002)*\u0003\u0002\u0002\u0002*+\u0007\t\u0002\u0002",
+    "+\u000b\u0003\u0002\u0002\u0002,.\u0007\b\u0002\u0002-/\u0005\u0010",
+    "\t\u0002.-\u0003\u0002\u0002\u0002/0\u0003\u0002\u0002\u00020.\u0003",
+    "\u0002\u0002\u000201\u0003\u0002\u0002\u000212\u0003\u0002\u0002\u0002",
+    "23\u0007\t\u0002\u00023\r\u0003\u0002\u0002\u000245\t\u0002\u0002\u0002",
+    "5\u000f\u0003\u0002\u0002\u000267\t\u0003\u0002\u00027\u0011\u0003\u0002",
+    "\u0002\u0002\u0006\u0015\u001c(0"].join("");
 
 
 var atn = new antlr4.atn.ATNDeserializer().deserialize(serializedATN);
@@ -49,7 +52,7 @@ var symbolicNames = [ null, "Rep", "RangeHigh", "RangeLow", "RepHigh", "RepLow",
                       "OpenBracket", "CloseBracket" ];
 
 var ruleNames =  [ "data", "representation", "repPair", "reps", "classHigh", 
-                   "classLow" ];
+                   "classLow", "patternHigh", "patternLow" ];
 
 function U16To32Parser (input) {
 	antlr4.Parser.call(this, input);
@@ -84,6 +87,8 @@ U16To32Parser.RULE_repPair = 2;
 U16To32Parser.RULE_reps = 3;
 U16To32Parser.RULE_classHigh = 4;
 U16To32Parser.RULE_classLow = 5;
+U16To32Parser.RULE_patternHigh = 6;
+U16To32Parser.RULE_patternLow = 7;
 
 function DataContext(parser, parent, invokingState) {
 	if(parent===undefined) {
@@ -140,17 +145,17 @@ U16To32Parser.prototype.data = function() {
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 13; 
+        this.state = 17; 
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         do {
-            this.state = 12;
+            this.state = 16;
             this.representation();
-            this.state = 15; 
+            this.state = 19; 
             this._errHandler.sync(this);
             _la = this._input.LA(1);
         } while((((_la) & ~0x1f) == 0 && ((1 << _la) & ((1 << U16To32Parser.Rep) | (1 << U16To32Parser.RepHigh) | (1 << U16To32Parser.OpenBracket))) !== 0));
-        this.state = 17;
+        this.state = 21;
         this.match(U16To32Parser.EOF);
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
@@ -216,22 +221,22 @@ U16To32Parser.prototype.representation = function() {
     var localctx = new RepresentationContext(this, this._ctx, this.state);
     this.enterRule(localctx, 2, U16To32Parser.RULE_representation);
     try {
-        this.state = 22;
+        this.state = 26;
         this._errHandler.sync(this);
         switch(this._input.LA(1)) {
         case U16To32Parser.OpenBracket:
             this.enterOuterAlt(localctx, 1);
-            this.state = 19;
+            this.state = 23;
             this.reps();
             break;
         case U16To32Parser.RepHigh:
             this.enterOuterAlt(localctx, 2);
-            this.state = 20;
+            this.state = 24;
             this.repPair();
             break;
         case U16To32Parser.Rep:
             this.enterOuterAlt(localctx, 3);
-            this.state = 21;
+            this.state = 25;
             this.match(U16To32Parser.Rep);
             break;
         default:
@@ -298,9 +303,9 @@ U16To32Parser.prototype.repPair = function() {
     this.enterRule(localctx, 4, U16To32Parser.RULE_repPair);
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 24;
+        this.state = 28;
         this.match(U16To32Parser.RepHigh);
-        this.state = 25;
+        this.state = 29;
         this.match(U16To32Parser.RepLow);
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
@@ -363,9 +368,9 @@ U16To32Parser.prototype.reps = function() {
     this.enterRule(localctx, 6, U16To32Parser.RULE_reps);
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 27;
+        this.state = 31;
         this.classHigh();
-        this.state = 28;
+        this.state = 32;
         this.classLow();
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
@@ -405,29 +410,16 @@ ClassHighContext.prototype.CloseBracket = function() {
     return this.getToken(U16To32Parser.CloseBracket, 0);
 };
 
-ClassHighContext.prototype.RangeHigh = function(i) {
-	if(i===undefined) {
-		i = null;
-	}
+ClassHighContext.prototype.patternHigh = function(i) {
+    if(i===undefined) {
+        i = null;
+    }
     if(i===null) {
-        return this.getTokens(U16To32Parser.RangeHigh);
+        return this.getTypedRuleContexts(PatternHighContext);
     } else {
-        return this.getToken(U16To32Parser.RangeHigh, i);
+        return this.getTypedRuleContext(PatternHighContext,i);
     }
 };
-
-
-ClassHighContext.prototype.RepHigh = function(i) {
-	if(i===undefined) {
-		i = null;
-	}
-    if(i===null) {
-        return this.getTokens(U16To32Parser.RepHigh);
-    } else {
-        return this.getToken(U16To32Parser.RepHigh, i);
-    }
-};
-
 
 ClassHighContext.prototype.enterRule = function(listener) {
     if(listener instanceof U16To32Listener ) {
@@ -453,26 +445,19 @@ U16To32Parser.prototype.classHigh = function() {
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 30;
+        this.state = 34;
         this.match(U16To32Parser.OpenBracket);
-        this.state = 32; 
+        this.state = 36; 
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         do {
-            this.state = 31;
-            _la = this._input.LA(1);
-            if(!(_la===U16To32Parser.RangeHigh || _la===U16To32Parser.RepHigh)) {
-            this._errHandler.recoverInline(this);
-            }
-            else {
-            	this._errHandler.reportMatch(this);
-                this.consume();
-            }
-            this.state = 34; 
+            this.state = 35;
+            this.patternHigh();
+            this.state = 38; 
             this._errHandler.sync(this);
             _la = this._input.LA(1);
         } while(_la===U16To32Parser.RangeHigh || _la===U16To32Parser.RepHigh);
-        this.state = 36;
+        this.state = 40;
         this.match(U16To32Parser.CloseBracket);
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
@@ -512,29 +497,16 @@ ClassLowContext.prototype.CloseBracket = function() {
     return this.getToken(U16To32Parser.CloseBracket, 0);
 };
 
-ClassLowContext.prototype.RangeLow = function(i) {
-	if(i===undefined) {
-		i = null;
-	}
+ClassLowContext.prototype.patternLow = function(i) {
+    if(i===undefined) {
+        i = null;
+    }
     if(i===null) {
-        return this.getTokens(U16To32Parser.RangeLow);
+        return this.getTypedRuleContexts(PatternLowContext);
     } else {
-        return this.getToken(U16To32Parser.RangeLow, i);
+        return this.getTypedRuleContext(PatternLowContext,i);
     }
 };
-
-
-ClassLowContext.prototype.RepLow = function(i) {
-	if(i===undefined) {
-		i = null;
-	}
-    if(i===null) {
-        return this.getTokens(U16To32Parser.RepLow);
-    } else {
-        return this.getToken(U16To32Parser.RepLow, i);
-    }
-};
-
 
 ClassLowContext.prototype.enterRule = function(listener) {
     if(listener instanceof U16To32Listener ) {
@@ -560,27 +532,162 @@ U16To32Parser.prototype.classLow = function() {
     var _la = 0; // Token type
     try {
         this.enterOuterAlt(localctx, 1);
-        this.state = 38;
+        this.state = 42;
         this.match(U16To32Parser.OpenBracket);
-        this.state = 40; 
+        this.state = 44; 
         this._errHandler.sync(this);
         _la = this._input.LA(1);
         do {
-            this.state = 39;
-            _la = this._input.LA(1);
-            if(!(_la===U16To32Parser.RangeLow || _la===U16To32Parser.RepLow)) {
-            this._errHandler.recoverInline(this);
-            }
-            else {
-            	this._errHandler.reportMatch(this);
-                this.consume();
-            }
-            this.state = 42; 
+            this.state = 43;
+            this.patternLow();
+            this.state = 46; 
             this._errHandler.sync(this);
             _la = this._input.LA(1);
         } while(_la===U16To32Parser.RangeLow || _la===U16To32Parser.RepLow);
-        this.state = 44;
+        this.state = 48;
         this.match(U16To32Parser.CloseBracket);
+    } catch (re) {
+    	if(re instanceof antlr4.error.RecognitionException) {
+	        localctx.exception = re;
+	        this._errHandler.reportError(this, re);
+	        this._errHandler.recover(this, re);
+	    } else {
+	    	throw re;
+	    }
+    } finally {
+        this.exitRule();
+    }
+    return localctx;
+};
+
+function PatternHighContext(parser, parent, invokingState) {
+	if(parent===undefined) {
+	    parent = null;
+	}
+	if(invokingState===undefined || invokingState===null) {
+		invokingState = -1;
+	}
+	antlr4.ParserRuleContext.call(this, parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = U16To32Parser.RULE_patternHigh;
+    return this;
+}
+
+PatternHighContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+PatternHighContext.prototype.constructor = PatternHighContext;
+
+PatternHighContext.prototype.RangeHigh = function() {
+    return this.getToken(U16To32Parser.RangeHigh, 0);
+};
+
+PatternHighContext.prototype.RepHigh = function() {
+    return this.getToken(U16To32Parser.RepHigh, 0);
+};
+
+PatternHighContext.prototype.enterRule = function(listener) {
+    if(listener instanceof U16To32Listener ) {
+        listener.enterPatternHigh(this);
+	}
+};
+
+PatternHighContext.prototype.exitRule = function(listener) {
+    if(listener instanceof U16To32Listener ) {
+        listener.exitPatternHigh(this);
+	}
+};
+
+
+
+
+U16To32Parser.PatternHighContext = PatternHighContext;
+
+U16To32Parser.prototype.patternHigh = function() {
+
+    var localctx = new PatternHighContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 12, U16To32Parser.RULE_patternHigh);
+    var _la = 0; // Token type
+    try {
+        this.enterOuterAlt(localctx, 1);
+        this.state = 50;
+        _la = this._input.LA(1);
+        if(!(_la===U16To32Parser.RangeHigh || _la===U16To32Parser.RepHigh)) {
+        this._errHandler.recoverInline(this);
+        }
+        else {
+        	this._errHandler.reportMatch(this);
+            this.consume();
+        }
+    } catch (re) {
+    	if(re instanceof antlr4.error.RecognitionException) {
+	        localctx.exception = re;
+	        this._errHandler.reportError(this, re);
+	        this._errHandler.recover(this, re);
+	    } else {
+	    	throw re;
+	    }
+    } finally {
+        this.exitRule();
+    }
+    return localctx;
+};
+
+function PatternLowContext(parser, parent, invokingState) {
+	if(parent===undefined) {
+	    parent = null;
+	}
+	if(invokingState===undefined || invokingState===null) {
+		invokingState = -1;
+	}
+	antlr4.ParserRuleContext.call(this, parent, invokingState);
+    this.parser = parser;
+    this.ruleIndex = U16To32Parser.RULE_patternLow;
+    return this;
+}
+
+PatternLowContext.prototype = Object.create(antlr4.ParserRuleContext.prototype);
+PatternLowContext.prototype.constructor = PatternLowContext;
+
+PatternLowContext.prototype.RangeLow = function() {
+    return this.getToken(U16To32Parser.RangeLow, 0);
+};
+
+PatternLowContext.prototype.RepLow = function() {
+    return this.getToken(U16To32Parser.RepLow, 0);
+};
+
+PatternLowContext.prototype.enterRule = function(listener) {
+    if(listener instanceof U16To32Listener ) {
+        listener.enterPatternLow(this);
+	}
+};
+
+PatternLowContext.prototype.exitRule = function(listener) {
+    if(listener instanceof U16To32Listener ) {
+        listener.exitPatternLow(this);
+	}
+};
+
+
+
+
+U16To32Parser.PatternLowContext = PatternLowContext;
+
+U16To32Parser.prototype.patternLow = function() {
+
+    var localctx = new PatternLowContext(this, this._ctx, this.state);
+    this.enterRule(localctx, 14, U16To32Parser.RULE_patternLow);
+    var _la = 0; // Token type
+    try {
+        this.enterOuterAlt(localctx, 1);
+        this.state = 52;
+        _la = this._input.LA(1);
+        if(!(_la===U16To32Parser.RangeLow || _la===U16To32Parser.RepLow)) {
+        this._errHandler.recoverInline(this);
+        }
+        else {
+        	this._errHandler.reportMatch(this);
+            this.consume();
+        }
     } catch (re) {
     	if(re instanceof antlr4.error.RecognitionException) {
 	        localctx.exception = re;
