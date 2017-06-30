@@ -10,5 +10,8 @@ describe(`Testing U16To32`, function () {
     'do-nothing1.txt',
     'convert1.txt',
     'convert2.txt',
+    'embedded1.txt',
+    'embedded2.txt',
+    'embedded3.txt',
   ]});
 });

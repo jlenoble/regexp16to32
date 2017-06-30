@@ -11,15 +11,20 @@ const convert = (uHigh, uLow) => {
   return '\\u{' + (1024 * high + low - 56613888).toString(16) + '}';
 };
 
+const write = process.stdout.write.bind(process.stdout);
+
 export class Translator extends U16To32Listener {
   enterRepresentation (ctx) {
     if (ctx.Rep()) { // eslint-disable-line new-cap
-      console.log(ctx.getText().toLowerCase());
+      write(ctx.getText().toLowerCase());
+    } else if (ctx.anything()) {
+      write(ctx.getText());
     }
   }
 
   enterRepPair (ctx) {
-    console.log(convert(
+    console.log(ctx.getText())
+    write(convert(
       ctx.RepHigh().getText(), // eslint-disable-line new-cap
       ctx.RepLow().getText() // eslint-disable-line new-cap
     ));
@@ -55,6 +60,14 @@ export class Translator extends U16To32Listener {
       });
     });
 
-    console.log('[' + ranges.join('') + ']');
+    write('[' + ranges.join('') + ']');
+  }
+
+  enterBracketedAnything () {
+    write('[');
+  }
+
+  exitBracketedAnything () {
+    write(']');
   }
 }

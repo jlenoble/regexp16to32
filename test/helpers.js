@@ -16,6 +16,7 @@ export function makeTests ({dir, files}) {
             if (logs) {
               reject(new Error(logs));
             } else {
+              console.log('');
               resolve();
             }
           });

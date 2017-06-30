@@ -1,13 +1,23 @@
 grammar U16To32;
 
 data
-: representation+ EOF
+: representation* EOF
 ;
 
 representation
 : reps
 | repPair
 | Rep
+| anything
+| bracketedAnything
+;
+
+anything
+: DISCARD+
+;
+
+bracketedAnything
+: OpenBracket representation* CloseBracket
 ;
 
 Rep
@@ -93,4 +103,8 @@ CloseBracket
 fragment
 HexDigit
 : [0-9a-fA-F]
+;
+
+DISCARD
+: .
 ;

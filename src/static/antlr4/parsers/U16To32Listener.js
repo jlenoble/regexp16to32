@@ -29,6 +29,24 @@ U16To32Listener.prototype.exitRepresentation = function(ctx) {
 };
 
 
+// Enter a parse tree produced by U16To32Parser#anything.
+U16To32Listener.prototype.enterAnything = function(ctx) {
+};
+
+// Exit a parse tree produced by U16To32Parser#anything.
+U16To32Listener.prototype.exitAnything = function(ctx) {
+};
+
+
+// Enter a parse tree produced by U16To32Parser#bracketedAnything.
+U16To32Listener.prototype.enterBracketedAnything = function(ctx) {
+};
+
+// Exit a parse tree produced by U16To32Parser#bracketedAnything.
+U16To32Listener.prototype.exitBracketedAnything = function(ctx) {
+};
+
+
 // Enter a parse tree produced by U16To32Parser#repPair.
 U16To32Listener.prototype.enterRepPair = function(ctx) {
 };
