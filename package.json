@@ -1,0 +1,56 @@
+{
+  "name": "u16to32",
+  "description": "Converts two 16-bit code unit representations to code point representations in supplementary planes",
+  "version": "0.0.0",
+  "keywords": [],
+  "author": {
+    "name": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com"
+  },
+  "contributors": [],
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.1.2"
+  },
+  "main": "lib/u16to32.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jlenoble/u16to32.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jlenoble/u16to32/issues"
+  },
+  "homepage": "https://github.com/jlenoble/u16to32#readme",
+  "dependencies": {
+    "antlr4": "*"
+  },
+  "devDependencies": {
+    "autoreload-gulp": "*",
+    "babel-plugin-add-module-exports": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-es2016": "*",
+    "babel-preset-es2017": "*",
+    "chai": "*",
+    "child-process-data": "*",
+    "del": "*",
+    "eslint-config-google": "*",
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-antlr4": "*",
+    "gulp-babel": "*",
+    "gulp-eslint": "*",
+    "gulp-mocha": "*",
+    "gulp-rename": "*",
+    "gulp-replace": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-util": "*",
+    "gulp-wrap": "*",
+    "markdown-include": "*",
+    "muter": "*",
+    "plumb-gulp": "*",
+    "through2": "*"
+  },
+  "peerDependencies": {}
+}

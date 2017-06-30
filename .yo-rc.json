@@ -1,0 +1,62 @@
+{
+  "generator-wupjs": {
+    "devDeps": {
+      "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+      "plumb-gulp": "*",
+      "autoreload-gulp": "*",
+      "gulp-sourcemaps": "*",
+      "del": "*",
+      "gulp-rename": "*",
+      "gulp-replace": "*",
+      "gulp-wrap": "*",
+      "markdown-include": "*",
+      "chai": "*",
+      "gulp-antlr4": "*",
+      "gulp-util": "*",
+      "through2": "*",
+      "child-process-data": "*",
+      "babel-preset-es2017": "*",
+      "babel-preset-es2016": "*",
+      "babel-preset-es2015": "*",
+      "babel-plugin-add-module-exports": "*",
+      "gulp-babel": "*",
+      "gulp-eslint": "*",
+      "eslint-config-google": "*",
+      "gulp-mocha": "*",
+      "muter": "*"
+    },
+    "genVersion": "0.3.1",
+    "updated": "2017-06-30T10:36:46.206Z",
+    "created": "2017-06-30T10:36:46.206Z",
+    "version": "0.0.0",
+    "contributors": [],
+    "keywords": [],
+    "deps": {
+      "antlr4": "*"
+    },
+    "peerDeps": {},
+    "name": "u16to32",
+    "description": "Converts two 16-bit code unit representations to code point representations in supplementary planes",
+    "author": "Jason Lenoble",
+    "email": "jason.lenoble@gmail.com",
+    "github": "jlenoble",
+    "preprocessors": [],
+    "license": "MIT",
+    "babel": "es2017",
+    "linters": [
+      "EsLint"
+    ],
+    "addons": [
+      "ANTLR4"
+    ],
+    "testRunners": [
+      "Mocha"
+    ],
+    "grammar": "U16To32",
+    "rule": "representation",
+    "parsers": [
+      "Listener"
+    ],
+    "listener": "Translator"
+  }
+}

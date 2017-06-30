@@ -1,0 +1,7 @@
+{
+  "build": "README.md",
+  "files": ["docs/index.md"],
+  "tableOfContents": {
+    "heading": "# u16to32\n\nConverts two 16-bit code unit representations to code point representations in supplementary planes"
+  }
+}
