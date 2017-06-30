@@ -1,24 +1,86 @@
 grammar U16To32;
 
+data
+: representation+ EOF
+;
+
 representation
-: stat+
+: reps
+| repPair
+| Rep
 ;
 
-stat
-: expr NEWLINE
-| ID '=' expr NEWLINE
-| NEWLINE
+Rep
+: EscapeU CodePointAsCodeUnit
 ;
 
-expr
-: expr ('*'|'/') expr
-| expr ('+'|'-') expr
-| INT
-| ID
-| '(' expr ')'
+repPair
+: RepHigh RepLow
 ;
 
-ID : [a-zA-Z]+ ;
-INT : [0-9]+ ;
-NEWLINE : '\r'? '\n' ;
-WS : [ \t]+ -> skip ;
+reps
+: classHigh classLow
+;
+
+classHigh
+: OpenBracket (RangeHigh|RepHigh)+ CloseBracket
+;
+
+classLow
+: OpenBracket (RangeLow|RepLow)+ CloseBracket
+;
+
+RangeHigh
+: RepHigh Dash RepHigh
+;
+
+RangeLow
+: RepLow Dash RepLow
+;
+
+RepHigh
+: EscapeU HighSurrogate
+;
+
+RepLow
+: EscapeU LowSurrogate
+;
+
+fragment
+CodePointAsCodeUnit
+: ~[dD] HexDigit HexDigit HexDigit
+| [dD] [0-7] HexDigit HexDigit
+;
+
+fragment
+HighSurrogate
+: [dD] [89abAB] HexDigit HexDigit
+;
+
+fragment
+LowSurrogate
+: [dD] [c-fC-F] HexDigit HexDigit
+;
+
+fragment
+EscapeU
+: '\\u'
+;
+
+fragment
+Dash
+: '-'
+;
+
+OpenBracket
+: '['
+;
+
+CloseBracket
+: ']'
+;
+
+fragment
+HexDigit
+: [0-9a-fA-F]
+;

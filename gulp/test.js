@@ -1,10 +1,10 @@
 import gulp from 'gulp';
 import mocha from 'gulp-mocha';
 import './build';
-import './parse';
-
+import {makeParser} from './parse';
+ 
 const testGlob = [
-  'build/test/**/*.test.js'
+  'build/test/**/*.test.js',
 ];
 
 export const test = () => {
@@ -12,4 +12,13 @@ export const test = () => {
     .pipe(mocha());
 };
 
-gulp.task('test', gulp.series(gulp.parallel('parse', 'build'), test));
+export const debug = () => {
+  return gulp.src(testGlob)
+    .pipe(mocha({
+      inspectBrk: true,
+    }));
+};
+
+gulp.task('test', gulp.series(makeParser, 'build', test));
+
+gulp.task('debug', gulp.series(makeParser, 'build', debug));

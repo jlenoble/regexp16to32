@@ -24,9 +24,7 @@
     "url": "https://github.com/jlenoble/u16to32/issues"
   },
   "homepage": "https://github.com/jlenoble/u16to32#readme",
-  "dependencies": {
-    "antlr4": "*"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoreload-gulp": "*",
     "babel-plugin-add-module-exports": "*",
@@ -38,7 +36,6 @@
     "del": "*",
     "eslint-config-google": "*",
     "gulp": "git://github.com/gulpjs/gulp.git#4.0",
-    "gulp-antlr4": "*",
     "gulp-babel": "*",
     "gulp-eslint": "*",
     "gulp-mocha": "*",
@@ -52,5 +49,8 @@
     "plumb-gulp": "*",
     "through2": "*"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp-antlr4": "*"
+  }
 }

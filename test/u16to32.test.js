@@ -1,12 +1,14 @@
-import Muter, {captured} from 'muter';
-import {expect} from 'chai';
-import U16to32 from '../src/u16to32';
+import {makeTests} from './helpers';
+import path from 'path';
 
-describe('Testing U16to32', function () {
-  const muter = Muter(console, 'log'); // eslint-disable-line new-cap
+describe(`Testing U16To32`, function () {
+  this.timeout(60000); // eslint-disable-line no-invalid-this
 
-  it(`Class U16to32 says 'Hello world!'`, captured(muter, function () {
-    new U16to32();
-    expect(muter.getLogs()).to.equal('Hello world!\n');
-  }));
+  const dir = path.join(process.cwd(), 'test', 'data');
+
+  makeTests({dir, files: [
+    'do-nothing1.txt',
+    'convert1.txt',
+    'convert2.txt',
+  ]});
 });

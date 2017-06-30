@@ -53,7 +53,7 @@
       "Mocha"
     ],
     "grammar": "U16To32",
-    "rule": "representation",
+    "rule": "data",
     "parsers": [
       "Listener"
     ],

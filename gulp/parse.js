@@ -2,14 +2,14 @@ import gulp from 'gulp';
 import antlr4 from 'gulp-antlr4';
 
 const grammarGlob = [
-  'src/static/antlr4/grammars/**/*.g4'
+  'src/static/antlr4/grammars/**/*.g4',
 ];
 const parserDir = 'src/static/antlr4/parsers';
 const dataGlob = [
-  'src/static/data/**/*.*'
+  'src/static/data/**/*.*',
 ];
 const grammar = 'U16To32';
-const rule = 'representation';
+const rule = 'data';
 const listener = 'Translator';
 const listenerDir = 'src/static/antlr4';
 
@@ -28,7 +28,7 @@ export const makeParser = () => {
     .pipe(antlr4({
       'listener': true,
       'parserDir': 'src/static/antlr4/parsers',
-      'visitor': false
+      'visitor': false,
     }));
 };
 
